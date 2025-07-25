@@ -1,13 +1,20 @@
 class Singleton {
     static #instance:Singleton = null;
+    static #isCreatingAllowed: boolean = false;
     #counter: number = 0;
     #message: string = "";
 
-    constructor() {}
+    constructor() {
+        if(!Singleton.#isCreatingAllowed) {
+            throw new Error("Cannot use Singleton constructor. Use getInstance() instead.");
+        }
+    }
 
-    static getInstance() {
+    static getInstance(): Singleton {
         if (this.#instance == null) {
+            this.#isCreatingAllowed = true;
             this.#instance = new Singleton();
+            this.#isCreatingAllowed = false;
         }
         return this.#instance;
     }
