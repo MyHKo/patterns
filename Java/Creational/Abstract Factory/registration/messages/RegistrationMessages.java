@@ -1,3 +1,5 @@
+package registration.interfaces
+
 interface RegistrationMessages {
     String getMessage();
 
