@@ -1,5 +1,8 @@
 package registration.procedures;
 
+import registration.forms.RegistrationFormUkrainian;
+import registration.messages.RegistrationMessageUkrainian;
+
 public class RegistrationProcedureUkrainian implements RegistrationProcedures {
     @Override
     public void registration() {
