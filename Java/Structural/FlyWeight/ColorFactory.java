@@ -1,7 +1,9 @@
+import java.util.HashMap;
+
 public class ColorFactory {
     private static HashMap<String, Color> colors = new HashMap<String, Color>();
 
-    public static getColor(String name){
-        colors.computeIfAbsent(name, Color::new);
+    public static Color getColor(String name){
+        return colors.computeIfAbsent(name, Color::new);
     }
 }

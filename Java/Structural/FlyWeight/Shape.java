@@ -8,6 +8,6 @@ public class Shape {
     }
 
     public void draw() {
-        System.out.println("Drawing a " + this.color.geName() + " " + this.name);
+        System.out.println("Drawing a " + this.color.getName() + " " + this.name);
     }
 }
