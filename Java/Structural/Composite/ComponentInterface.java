@@ -1,3 +1,3 @@
 interface Component {
-    int getPrice();
+    public int getPrice();
 }
