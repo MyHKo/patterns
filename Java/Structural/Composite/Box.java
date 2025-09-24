@@ -3,7 +3,7 @@ class Box extends Item {
 
     public Box() {}
 
-    public void addItem(Item product) {
+    public void put(Item product) {
         this.productList.add(product)
     }
 
